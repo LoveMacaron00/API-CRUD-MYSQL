@@ -26,7 +26,7 @@ db.connect((err) => {
 //เพิ่มข้อมูลนักเรียน
 app.post('/api/create', (req, res) => {
     const { Name, Email } = req.body;
-    const sql = 'INSERT INTO student (name, email) VALUES (?,?)';
+    const sql = 'INSERT INTO student (Name, Email) VALUES (?,?)';
     db.query(sql, [Name, Email], (err, result) => {
         if (err) {
             res.status(500).json({ error: 'เกิดข้อผิดพลาดในการเพื่มข้อมูล' });
