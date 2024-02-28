@@ -66,7 +66,7 @@ app.put('/api/update/:id', (req, res) => {
     const { id } = req.params;
     const { Name, Email } = req.body;
     const sql = 'UPDATE student SET Name = ?, Email = ? WHERE ID=?';
-    db.query(sql, [Name, Email, id], (err, result) => {
+    db.query(sql, [Name, Email, ID], (err, result) => {
         if (err) {
             res.status(500).json({ error: 'เกิดข้อผิดพลาดในการอัพเดตข้อมูลนักเรียนตาม id' });
             return;
