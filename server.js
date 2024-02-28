@@ -3,7 +3,6 @@ import mysql from 'mysql';
 import cors from 'cors';
 
 const app = express();
-const port = 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -89,6 +88,6 @@ app.delete('/api/delete/:id', (req, res) => {
 });
 
 //เริ่มเซิร์ฟเวอร์
-app.listen(port, () => {
-    console.log(`เซิร์ฟเวอร์กำลังทำงานบนพอร์ต : ${port}`);
+app.listen(8081, () => {
+    console.log("เซิร์ฟเวอร์กำลังทำงาน");
 });
